@@ -1,0 +1,49 @@
+$mobile-width: 426px;
+@import './resultComponent-Style.scss';
+@import './SummaryComponent-Style.scss';
+
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url('../../src/assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: HankenGrotesk;
+  box-sizing: border-box;
+}
+body{
+  background-color: hsl(221, 100%, 96%);
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+  height: 100vh;
+  width: 90vw;
+}
+@media only screen and (min-width: $mobile-width){
+  body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-container{
+    min-width: 627px;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 25%;
+    border-radius: 25px;
+    margin: 0 auto;
+    height: 27%;
+    background-color: white;
+    -webkit-box-shadow: 3px 4px 5px 0px rgba(170, 170, 170, 0.219);
+    -moz-box-shadow: 3px 4px 5px 0px rgba(170, 170, 170, 0.219);
+    box-shadow: 3px 4px 5px 0px rgba(170, 170, 170, 0.219);
+  }
+}
