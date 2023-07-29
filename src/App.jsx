@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { axiosGetter } from "./helpers/axiosGetter";
+import data from "../src/helpers/data.json";
 
 import { ResultComponent, SummaryComponent } from "./components";
 
@@ -7,8 +7,7 @@ function App() {
   const [items, setItems] = useState([]);
   const [percentage, setPercentage] = useState(0);
 
-  const getItems = async () => {
-    const { data } = await axiosGetter();
+  const getItems = () => {
     setItems(data);
     setPercentage(
       Math.floor(data.reduce((acc, item) => acc + item.score, 0) / data.length)
